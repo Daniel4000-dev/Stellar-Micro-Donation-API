@@ -4,7 +4,7 @@
   "description": "Micro-donation API using Stellar blockchain",
   "main": "src/routes/app.js",
   "scripts": {
-    "start": "node src/routes/app.js",
+    "start": "node init && node src/routes/app.js",
     "init-db": "node src/scripts/initDB.js",
     "migrate:memo": "node src/scripts/addMemoColumn.js",
     "migrate:currency": "node src/scripts/migrations/addCurrencyColumns.js",
@@ -22,7 +22,6 @@
     "validate:rbac": "node scripts/validate-rbac.js"
   },
   "dependencies": {
-    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-rate-limit": "^8.3.1",
     "helmet": "^8.1.0",
